@@ -25,8 +25,6 @@ void incluir(){
     cin >> c.Nota_2;
     agenda[quant] = c;
     quant++;
-    
-    
 }
 
 void pesquisar(){
@@ -35,10 +33,11 @@ void pesquisar(){
   for(int i = 0; i < quant; i++){
     if(!strcmp(agenda[i].Nome, nome_Pesquisa)){
       res++;
-      cout << "****Aluno encontrado****" << endl;
+      cout << "****ALUNO ENCONTRADO****" << endl;
       cout << "Nome: " << agenda[i].Nome << endl;
       cout << "Nota 1: " << agenda[i].Nota_1 << endl;
       cout << "Nota 2: " << agenda[i].Nota_2 << endl;
+      break;  
     }
   }
 }
@@ -49,20 +48,19 @@ void excluir(){
   for(int i = 0; i < quant; i++){
     if(!strcmp(agenda[i].Nome, nome_Excluir)){
       exc++;
-      cout << "****Aluno encontrado****" << endl;
-      for(int i; i < add; add--){
-        memset (agenda[i].Nome,'\0',10);
-        memset (agenda[i].Nota_1,'\0',10);
-        memset (agenda[i].Nota_2,'\0',10);
-        cout << "****Aluno excluido****" << endl;  
-      }
+      cout << "****ALUNO ENCONTRADO****" << endl;
+      memset (agenda[i].Nome,'\0',10);
+      memset (agenda[i].Nota_1,'\0',10);
+      memset (agenda[i].Nota_2,'\0',10);
+      cout << "****ALUNO EXCLUIDO****" << endl;
       }
     else{
-      cout << "****Este aluno não está no sistema****" << endl;
+      cout << "****ALUNO NÃO ENCONTRADO****" << endl;
     }
-  }
-} 
+  }   
+}
 
+ 
      
 
 void imprimir(){
@@ -83,6 +81,6 @@ void imprimir(){
     else if(media >= 6){
       cout << "A média é: " << media << endl << "\n****ALUNO APROVADO****\n" << endl;
     }
-    }
   }
+}
 

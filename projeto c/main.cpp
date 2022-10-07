@@ -18,8 +18,7 @@ int main (void) {
         }
         else if (decisao == 3){
             pesquisar();
-        }
-        
+        }      
         else if (decisao == 4){
             imprimir();
         } 
